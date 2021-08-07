@@ -1,0 +1,28 @@
+{
+  "name": "project-three",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JWCoad/project-three.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JWCoad/project-three/issues"
+  },
+  "homepage": "https://github.com/JWCoad/project-three#readme",
+  "dependencies": {
+    "apollo-server-express": "^3.1.2",
+    "express": "^4.17.1",
+    "graphql": "^15.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.13.5",
+    "nodemon": "^2.0.12"
+  }
+}
