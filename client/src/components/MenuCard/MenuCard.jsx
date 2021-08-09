@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 //import { Test } from './MenuCard.styles';
 import image1 from "../../assets/images/cocktail.jpg";
 import { Card, Col } from "react-bootstrap";
-import styles from "./MenuCard.module.css";
+// import styles from "./MenuCard.module.css";
 
 const MenuCard = ({ name, picture, description }) => (
   <Col md={3} style={{ marginTop: "10px" }}>

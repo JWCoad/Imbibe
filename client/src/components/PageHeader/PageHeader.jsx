@@ -5,6 +5,7 @@ import { Nav } from "react-bootstrap";
 import history from "../../utilities/history";
 import { LoginContext } from "../../utilities/contexts/login-context";
 import { redirectToDashboard } from "../../utilities/navigation-helper";
+import styles from "./PageHeader.module.css";
 
 const PageHeader = (props) => {
   const userInfoContext = useContext(LoginContext);
@@ -20,31 +21,33 @@ const PageHeader = (props) => {
     userInfoContext.setUserInfo(null);
   };
   return (
-    <Nav
-      className="justify-content-center"
-      activeKey="/home"
-      onSelect={handleClick}
-    >
-      <Nav.Item>
-        <Nav.Link eventKey="/">BarName</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="/menu">Menu</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="/bookings">Bookings</Nav.Link>
-      </Nav.Item>
-      {!userInfoContext.userInfo && (
+    <div className={styles.navColor}>
+      <Nav
+        className="justify-content-center"
+        activeKey="/home"
+        onSelect={handleClick}
+      >
         <Nav.Item>
-          <Nav.Link eventKey="/login">Login</Nav.Link>
+          <Nav.Link eventKey="/">BarName</Nav.Link>
         </Nav.Item>
-      )}
-      {userInfoContext.userInfo && (
         <Nav.Item>
-          <Nav.Link eventKey="logout">Logout</Nav.Link>
+          <Nav.Link eventKey="/menu">Menu</Nav.Link>
         </Nav.Item>
-      )}
-    </Nav>
+        <Nav.Item>
+          <Nav.Link eventKey="/bookings">Bookings</Nav.Link>
+        </Nav.Item>
+        {!userInfoContext.userInfo && (
+          <Nav.Item>
+            <Nav.Link eventKey="/login">Login</Nav.Link>
+          </Nav.Item>
+        )}
+        {userInfoContext.userInfo && (
+          <Nav.Item>
+            <Nav.Link eventKey="logout">Logout</Nav.Link>
+          </Nav.Item>
+        )}
+      </Nav>
+    </div>
   );
 };
 

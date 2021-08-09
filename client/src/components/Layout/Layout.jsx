@@ -3,6 +3,7 @@ import React, { PureComponent } from "react";
 //import { Test } from "./Layout.styles";
 import { Container } from "react-bootstrap";
 import PageHeader from "../PageHeader";
+import styles from "./Layout.module.css";
 
 class Layout extends PureComponent {
   constructor(props) {
