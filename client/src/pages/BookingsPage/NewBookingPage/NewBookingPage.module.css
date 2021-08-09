@@ -1,4 +1,11 @@
 .bannerColor {
-  background-color: grey;
+  background-color: lightgrey;
   border: 3px solid black;
+  padding: 4px;
+  margin-top: 4px;
+}
+
+.formColor {
+  background-color: red;
+  border: 1px solid black;
 }

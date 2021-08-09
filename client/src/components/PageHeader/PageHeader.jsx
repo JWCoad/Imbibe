@@ -37,7 +37,7 @@ const PageHeader = (props) => {
         </Nav.Item>
         {!userInfoContext.userInfo && (
           <Nav.Item>
-            <Nav.Link eventKey="/login">Login</Nav.Link>
+            <Nav.Link eventKey="/login">Staff</Nav.Link>
           </Nav.Item>
         )}
         {userInfoContext.userInfo && (

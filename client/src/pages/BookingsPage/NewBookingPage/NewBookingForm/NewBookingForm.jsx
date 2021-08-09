@@ -34,57 +34,59 @@ class NewBookingForm extends PureComponent {
     }
     return (
       <div className="NewBookingFormWrapper">
-        <Formik
-          initialValues={this.state.initialValues}
-          validationSchema={NewBookingValidationSchema}
-          onSubmit={(values) => {
-            this.props.handleCreateBooking(values);
-          }}
-        >
-          {({ errors, touched }) => (
-            <Form>
-              <InputField name="name" label="Name" />
-              <InputField
-                name="noOfPeople"
-                label="Number of People"
-                type="number"
-              />
-              <InputField name="contactNumber" label="Contact Number" />
-              <Field name="date">
-                {({
-                  field, // { name, value, onChange, onBlur }
-                  form: { touched, errors, setFieldValue }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
-                  meta,
-                }) => (
-                  <div>
-                    <label for={`input-date`}>Date & Time</label>
-                    <DatePicker
-                      showTime
-                      id={`input-date`}
-                      className={`form-control input mt-2 ${
-                        meta.touched && meta.error ? "is-invalid" : ""
-                      }`}
-                      onChange={(value) =>
-                        setFieldValue("date", value.toISOString())
-                      }
-                    />
-                    {meta.touched && meta.error && (
-                      <Alert variant="danger">{meta.error}</Alert>
-                    )}
-                  </div>
-                )}
-              </Field>
-              <InputField
-                name="comment"
-                label="Comments"
-                labelClassName="mt-3"
-              />
-              <Button type="submit" className="float-end">
-                Confirm Booking
-              </Button>
-            </Form>
-          )}
-        </Formik>
+        <div className={styles.formColor}>
+          <Formik
+            initialValues={this.state.initialValues}
+            validationSchema={NewBookingValidationSchema}
+            onSubmit={(values) => {
+              this.props.handleCreateBooking(values);
+            }}
+          >
+            {({ errors, touched }) => (
+              <Form>
+                <InputField name="name" label="Name" />
+                <InputField
+                  name="noOfPeople"
+                  label="Number of People"
+                  type="number"
+                />
+                <InputField name="contactNumber" label="Contact Number" />
+                <Field name="date">
+                  {({
+                    field, // { name, value, onChange, onBlur }
+                    form: { touched, errors, setFieldValue },
+                    meta,
+                  }) => (
+                    <div>
+                      <label for={`input-date`}>Date & Time</label>
+                      <DatePicker
+                        showTime
+                        id={`input-date`}
+                        className={`form-control input mt-2 ${
+                          meta.touched && meta.error ? "is-invalid" : ""
+                        }`}
+                        onChange={(value) =>
+                          setFieldValue("date", value.toISOString())
+                        }
+                      />
+                      {meta.touched && meta.error && (
+                        <Alert variant="danger">{meta.error}</Alert>
+                      )}
+                    </div>
+                  )}
+                </Field>
+                <InputField
+                  name="comment"
+                  label="Comments"
+                  labelClassName="mt-3"
+                />
+                <Button type="submit" className="float-end">
+                  Confirm Booking
+                </Button>
+              </Form>
+            )}
+          </Formik>
+        </div>
       </div>
       // </div>
     );
