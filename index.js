@@ -4,8 +4,10 @@ const { readFileSync } = require("fs");
 const typeDefs = readFileSync("./schema.graphql").toString("utf-8");
 const resolvers = require("./resolvers");
 const path = require("path");
-require("dotenv").config();
+const cors = require("cors");
+const PORT = process.env.PORT || 4000;
 
+require("dotenv").config();
 async function startApolloServer() {
   const server = new ApolloServer({ typeDefs, resolvers });
   await server.start();
@@ -25,3 +27,20 @@ try {
   console.error("Could not start Application due to", error);
   process.exit(-1);
 }
+
+//heroku
+app.use(cors());
+
+app.use(
+  "/graphql",
+  graphqlHTTP({
+    schema,
+    graphiql: true,
+  })
+);
+
+app.use(express.static("public"));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "public", "index.html"));
+});
