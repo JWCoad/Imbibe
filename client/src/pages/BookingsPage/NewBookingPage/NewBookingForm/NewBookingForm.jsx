@@ -6,6 +6,7 @@ import InputField from "../../../../components/InputField";
 import { DatePicker } from "antd";
 import { Alert, Button } from "react-bootstrap";
 import NewBookingValidationSchema from "./NewBookingValidationSchema";
+import styles from "./NewBookingForm.module.css";
 
 class NewBookingForm extends PureComponent {
   constructor(props) {
@@ -32,7 +33,8 @@ class NewBookingForm extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="NewBookingFormWrapper">
+      <div className="NewBookingFormWrapper" classname={styles.bookingColor}>
+        {/* <div classname={styles.bookingColor}> */}
         <Formik
           initialValues={this.state.initialValues}
           validationSchema={NewBookingValidationSchema}
@@ -85,6 +87,7 @@ class NewBookingForm extends PureComponent {
           )}
         </Formik>
       </div>
+      // </div>
     );
   }
 }
