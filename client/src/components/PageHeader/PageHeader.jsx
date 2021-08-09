@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-// import PropTypes from "prop-types";
-//import { Test } from './PageHeader.styles';
+
 import { Nav } from "react-bootstrap";
 import history from "../../utilities/history";
 import { LoginContext } from "../../utilities/contexts/login-context";
@@ -28,7 +27,7 @@ const PageHeader = (props) => {
         onSelect={handleClick}
       >
         <Nav.Item>
-          <Nav.Link eventKey="/">BarName</Nav.Link>
+          <Nav.Link eventKey="/">Imbibe</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link eventKey="/menu">Menu</Nav.Link>
@@ -51,12 +50,8 @@ const PageHeader = (props) => {
   );
 };
 
-PageHeader.propTypes = {
-  // bla: PropTypes.string,
-};
+PageHeader.propTypes = {};
 
-PageHeader.defaultProps = {
-  // bla: 'test',
-};
+PageHeader.defaultProps = {};
 
 export default PageHeader;

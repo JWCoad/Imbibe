@@ -1,6 +1,5 @@
 import React from "react";
-// import PropTypes from "prop-types";
-// import { Test } from './InputField.styles';
+
 import { Field } from "formik";
 import { Form as BSForm, Alert } from "react-bootstrap";
 
@@ -8,11 +7,7 @@ const InputField = (props) => {
   const { name, type, placeholder, label, extraText } = props;
   return (
     <Field name={name}>
-      {({
-        field, // { name, value, onChange, onBlur }
-        form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
-        meta,
-      }) => (
+      {({ field, form: { touched, errors }, meta }) => (
         <div>
           <BSForm.Group className="mb-3">
             <BSForm.Label
@@ -37,7 +32,6 @@ const InputField = (props) => {
             {meta.touched && meta.error && (
               <Alert variant="danger">{meta.error}</Alert>
             )}
-            {/* <ErrorMessage name={name} /> */}
           </BSForm.Group>
         </div>
       )}

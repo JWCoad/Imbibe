@@ -33,8 +33,7 @@ class NewBookingForm extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="NewBookingFormWrapper" classname={styles.bookingColor}>
-        {/* <div classname={styles.bookingColor}> */}
+      <div className="NewBookingFormWrapper">
         <Formik
           initialValues={this.state.initialValues}
           validationSchema={NewBookingValidationSchema}

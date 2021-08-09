@@ -26,7 +26,7 @@ MenuCard.propTypes = {
 MenuCard.defaultProps = {
   name: "Card Name",
   picture: image1,
-  description: "some description",
+  description: "Refreshing Beverage",
 };
 
 export default MenuCard;

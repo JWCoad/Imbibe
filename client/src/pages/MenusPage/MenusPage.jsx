@@ -2,51 +2,56 @@ import React from "react";
 // import PropTypes from "prop-types";
 //import { Test } from './MenusPage.styles';
 import image1 from "../../assets/images/cocktail.jpg";
+import image3 from "../../assets/images/cocktail3.jpg";
+import image4 from "../../assets/images/cocktail4.jpg";
+import image6 from "../../assets/images/cocktail6.jpg";
+import image7 from "../../assets/images/cocktail7.jpg";
+import image8 from "../../assets/images/cocktail8.jpg";
 import MenuCard from "../../components/MenuCard/MenuCard";
 import { Row } from "react-bootstrap";
 import Page from "../../components/Page";
 import styles from "./MenusPage.module.css";
 const MENUS = [
   {
-    name: "Menu 1",
+    name: "Beverage 1",
     picture: image1,
-    description: "Menu 1 description",
+    description: "A tasty drink",
   },
   {
-    name: "Menu 2",
-    picture: image1,
-    description: "Menu 2 description",
+    name: "Beverage 2",
+    picture: image3,
+    description: "Also a tasty drink",
   },
   {
-    name: "Menu 3",
-    picture: image1,
-    description: "Menu 3 description",
+    name: "Beverage 3",
+    picture: image6,
+    description: "It has fruit in it",
   },
   {
-    name: "Menu 4",
-    picture: image1,
-    description: "Menu 4 description",
+    name: "Beverage 4",
+    picture: image8,
+    description: "Even more fruit",
   },
-  {
-    name: "Menu 1",
-    picture: image1,
-    description: "Menu 1 description",
-  },
-  {
-    name: "Menu 2",
-    picture: image1,
-    description: "Menu 2 description",
-  },
-  {
-    name: "Menu 3",
-    picture: image1,
-    description: "Menu 3 description",
-  },
-  {
-    name: "Menu 4",
-    picture: image1,
-    description: "Menu 4 description",
-  },
+  // {
+  //   name: "Beverage 5",
+  //   picture: image8,
+  //   description: "Served in a chilled tin cup",
+  // },
+  // {
+  //   name: "Beverage 6",
+  //   picture: image1,
+  //   description: "This has no ice",
+  // },
+  // {
+  //   name: "Beverage 7",
+  //   picture: image1,
+  //   description: "This is very sour",
+  // },
+  // {
+  //   name: "Beverage 8",
+  //   picture: image1,
+  //   description: "This is very sweet",
+  // },
 ];
 
 const MenusPage = (props) => (

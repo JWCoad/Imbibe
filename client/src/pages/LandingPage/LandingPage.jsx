@@ -9,10 +9,10 @@ import styles from "./LandingPage.module.css";
 
 const LandingPage = (props) => (
   <Page className="LandingPageWrapper">
-    <Row classname={styles.LandingpageWrapper}>
+    <Row classname={styles.LandingPageWrapper}>
       <Image src={LandingPageImage} fluid />
     </Row>
-    <Row style={{ marginTop: "30px" }}>{sampleDescriptionText}</Row>
+    <Row style={{ margin: "40px" }}>{sampleDescriptionText}</Row>
   </Page>
 );
 

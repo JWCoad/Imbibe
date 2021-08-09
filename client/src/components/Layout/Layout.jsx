@@ -1,6 +1,5 @@
 import React, { PureComponent } from "react";
-// import PropTypes from "prop-types";
-//import { Test } from "./Layout.styles";
+
 import { Container } from "react-bootstrap";
 import PageHeader from "../PageHeader";
 import styles from "./Layout.module.css";
@@ -19,13 +18,10 @@ class Layout extends PureComponent {
   };
 
   static getDerivedStateFromError(error) {
-    // getDerivedStateFromError -> Update state so the next render will show the fallback UI.
     return { hasError: true };
   }
 
-  componentDidCatch(error, info) {
-    // You can also log the error to an error reporting service
-  }
+  componentDidCatch(error, info) {}
 
   getDerivedStateFromProps = (nextProps, prevState) => {
     console.log("Layout getDerivedStateFromProps", nextProps, prevState);
@@ -56,12 +52,8 @@ class Layout extends PureComponent {
   }
 }
 
-Layout.propTypes = {
-  // bla: PropTypes.string,
-};
+Layout.propTypes = {};
 
-Layout.defaultProps = {
-  // bla: 'test',
-};
+Layout.defaultProps = {};
 
 export default Layout;
