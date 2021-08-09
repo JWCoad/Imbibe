@@ -1,0 +1,40 @@
+scalar Date
+type Query {
+  bookings(filter: BookingsFilter): [Booking]
+  booking(id: ID): Booking
+}
+
+type Mutation {
+  createBooking(bookingData: CreateBookingInput): Booking
+  confirmBooking(bookingId: ID, status: Boolean): Booking
+  deleteBooking(bookingId: ID): BookingResponsePayLoad
+}
+
+type Booking {
+  _id: ID
+  name: String
+  noOfPeople: Int
+  contactNumber: String
+  date: Date
+  comment: String
+  confirmed: Boolean
+}
+
+type BookingResponsePayLoad {
+  status: Boolean
+  message: String
+}
+
+input BookingsFilter {
+  startDate: Date
+  endDate: Date
+}
+
+input CreateBookingInput {
+  name: String
+  noOfPeople: Int
+  contactNumber: String
+  date: Date
+  comment: String
+  confirmed: Boolean
+}
