@@ -6,7 +6,7 @@ const NewBookingValidationSchema = Yup.object().shape({
     .required("Please Provide the booking name."),
   noOfPeople: Yup.string()
     // .email('Invalid email')
-    .required("No. of people is required"),
+    .required("Number of people is required"),
   contactNumber: Yup.string().required(
     "Please provide your contact information."
   ),
