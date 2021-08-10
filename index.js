@@ -1,11 +1,12 @@
 const express = require("express");
-const { ApolloServer, gql } = require("apollo-server-express");
+const { ApolloServer } = require("apollo-server-express");
+//gql
 const { readFileSync } = require("fs");
 const typeDefs = readFileSync("./schema.graphql").toString("utf-8");
 const resolvers = require("./resolvers");
 const path = require("path");
-const cors = require("cors");
-const PORT = process.env.PORT || 4000;
+// const cors = require("cors");
+// const PORT = process.env.PORT || 4000;
 
 require("dotenv").config();
 async function startApolloServer() {
@@ -14,10 +15,22 @@ async function startApolloServer() {
 
   const app = express();
   server.applyMiddleware({ app });
+
   // app.use(express.static(path.join(__dirname, "client", "build")));
   // app.get("*", (req, res) => {
   //   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
   // });
+  app.use(express.urlencoded({ extended: true }));
+  app.use(express.json());
+
+  if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "../client/build")));
+  }
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/build/index.html"));
+  });
+
   await new Promise((resolve) =>
     app.listen({ port: process.env.PORT || 4000 }, resolve)
   );
