@@ -9,6 +9,7 @@ const path = require("path");
 // const PORT = process.env.PORT || 4000;
 
 require("dotenv").config();
+
 async function startApolloServer() {
   const server = new ApolloServer({ typeDefs, resolvers });
   await server.start();
