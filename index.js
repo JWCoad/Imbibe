@@ -14,7 +14,10 @@ async function startApolloServer() {
 
   const app = express();
   server.applyMiddleware({ app });
-
+  app.use(express.static(path.join(__dirname, "client", "build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
   await new Promise((resolve) =>
     app.listen({ port: process.env.PORT || 4000 }, resolve)
   );
