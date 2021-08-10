@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "develop": "concurrently \"  npm run \" \"cd client && npm start\"",
-    "install": " npm i && cd ../client && npm i",
+    "install": "npm i && cd ../client && npm i",
     "build": "cd client && npm run build"
   },
   "repository": {
