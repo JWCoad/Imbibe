@@ -5,7 +5,7 @@ import history from "../../utilities/history";
 import { LoginContext } from "../../utilities/contexts/login-context";
 import { redirectToDashboard } from "../../utilities/navigation-helper";
 import styles from "./PageHeader.module.css";
-
+// set up navbar
 const PageHeader = (props) => {
   const userInfoContext = useContext(LoginContext);
   const handleClick = (selectedKey) => {

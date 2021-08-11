@@ -1,9 +1,7 @@
 import React from "react";
-// import PropTypes from "prop-types";
-//import { Test } from './BookingInfoCard.styles';
 import { Col, Card, Row, Button } from "react-bootstrap";
 import moment from "moment";
-
+//set up booked info
 const BookingInfoCard = (props) => {
   return (
     <Col md={6} style={{ marginTop: "10px" }}>
@@ -55,12 +53,8 @@ const BookingInfoCard = (props) => {
   );
 };
 
-BookingInfoCard.propTypes = {
-  // bla: PropTypes.string,
-};
+BookingInfoCard.propTypes = {};
 
-BookingInfoCard.defaultProps = {
-  // bla: 'test',
-};
+BookingInfoCard.defaultProps = {};
 
 export default BookingInfoCard;
