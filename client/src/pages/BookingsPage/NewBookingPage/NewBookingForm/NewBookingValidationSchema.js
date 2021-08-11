@@ -9,8 +9,8 @@ const NewBookingValidationSchema = Yup.object().shape({
   noOfPeople: Yup.string().required("Number of people is required"),
   contactNumber: Yup.string()
     .required("Please provide your contact information.")
-    .min(10, "Valid Number")
-    .max(10, "Valid Number"),
+    .min(10, "Invalid Number")
+    .max(10, "Invalid Number"),
 
   date: Yup.string().required("Please provide Date and time."),
 });
