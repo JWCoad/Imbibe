@@ -1,3 +1,4 @@
+// db set up
 const mongoose = require("mongoose");
 
 const BookingModel = mongoose.model("Bookings", {

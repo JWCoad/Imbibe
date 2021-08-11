@@ -1,3 +1,4 @@
+//modify bookings and communicate it to db
 const BookingModel = require("../../models/booking-model");
 // const _ = require("lodash");
 

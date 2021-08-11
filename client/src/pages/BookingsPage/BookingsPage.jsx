@@ -1,3 +1,4 @@
+//set up page
 import React, { useContext } from "react";
 import { LoginContext } from "../../utilities/contexts/login-context";
 import BookingsListingPage from "./BookingsListingPage";

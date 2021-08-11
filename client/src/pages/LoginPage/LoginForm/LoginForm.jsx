@@ -1,3 +1,4 @@
+// pull in elements
 import React, { PureComponent } from "react";
 
 import { Form, Formik } from "formik";
@@ -7,6 +8,11 @@ import { Container } from "react-bootstrap";
 import { fetchLoginUser } from "../../../utilities/services/authentication";
 import { redirectToBookings } from "../../../utilities/navigation-helper";
 import { LoginContext } from "../../../utilities/contexts/login-context";
+import styles from "./LoginForm.module.css";
+//login element, check for matching values
+// const cStyle = {
+//   border: "5px solid pink",
+// };
 
 class LoginForm extends PureComponent {
   static contextType = LoginContext;
@@ -43,7 +49,7 @@ class LoginForm extends PureComponent {
       errorMessage: message,
     });
   }
-
+  // render page and form
   render() {
     if (this.state.hasError) {
       return <h1>Something went wrong.</h1>;
@@ -51,7 +57,7 @@ class LoginForm extends PureComponent {
     return (
       <div className="LoginFormWrapper">
         <Container>
-          <Row>
+          <Row className={styles.border}>
             <Col md={3} s={12}></Col>
             <Col md={6} s={12}>
               <Row>

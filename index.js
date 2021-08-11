@@ -1,3 +1,4 @@
+// dependents
 const express = require("express");
 const { ApolloServer } = require("apollo-server-express");
 //gql
@@ -9,7 +10,7 @@ const path = require("path");
 // const PORT = process.env.PORT || 4000;
 
 require("dotenv").config();
-
+// start server
 async function startApolloServer() {
   const server = new ApolloServer({ typeDefs, resolvers });
   await server.start();
@@ -17,20 +18,6 @@ async function startApolloServer() {
   const app = express();
   server.applyMiddleware({ app });
 
-  // app.use(express.static(path.join(__dirname, "client", "build")));
-  // app.get("*", (req, res) => {
-  //   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-  // });
-  // app.use(express.urlencoded({ extended: true }));
-  // app.use(express.json());
-
-  // if (process.env.NODE_ENV === "production") {
-  //   app.use(express.static(path.join(__dirname, "/client/build")));
-  // }
-
-  // app.get("*", (req, res) => {
-  //   res.sendFile(path.join(__dirname, "/client/build/index.html"));
-  // });
   app.use(express.static(path.join(__dirname, "client", "build")));
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
@@ -50,7 +37,7 @@ try {
   console.error("Could not start Application due to", error);
   process.exit(-1);
 }
-
+// to be deleted
 //heroku
 // app.use(cors());
 
@@ -66,4 +53,18 @@ try {
 
 // app.get("*", (req, res) => {
 //   res.sendFile(path.resolve(__dirname, "public", "index.html"));
+// });
+// app.use(express.static(path.join(__dirname, "client", "build")));
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+// });
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "/client/build")));
+// }
+
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "/client/build/index.html"));
 // });

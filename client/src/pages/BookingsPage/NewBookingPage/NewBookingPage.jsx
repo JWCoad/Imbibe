@@ -8,7 +8,7 @@ import { CREATE_BOOKING } from "../../../graphql/mutations/bookings";
 import _ from "lodash";
 import { redirectToDashboard } from "../../../utilities/navigation-helper";
 import styles from "./NewBookingPage.module.css";
-
+// create booking if not logged in and sends
 const NewBookingPage = (props) => {
   const [createBooking] = useMutation(CREATE_BOOKING);
 

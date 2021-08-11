@@ -1,3 +1,4 @@
+// set up page and pull in parts
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import BookingInfoCard from "../../../components/BookingInfoCard";
@@ -11,6 +12,7 @@ import {
 } from "../../../graphql/mutations/bookings";
 import _ from "lodash";
 
+// fetchs bookings if logged in
 const BookingsListingPage = (props) => {
   const [filters, setFilters] = React.useState(null);
   const { loading, data, refetch } = useQuery(FETCH_BOOKINGS, {
