@@ -4,7 +4,7 @@
 
 ### [Deployed at](https://desolate-bayou-43609.herokuapp.com/)
 
-### Screenshot of deployed app ![Screenshot](project-three\client\src\assets\images\screenshot.JPG)
+### Screenshot of deployed app ![Screenshot](\client\src\assets\images\screenshot.JPG)
 
 ### Screenshot of deployed app ![Screenshot](client\src\assets\images\screenshot2.JPG)
 
@@ -12,12 +12,12 @@
 
 ## Installation Instructions
 
-To install:
-run "npm i"
-then "npm start"
-then "cd client"
-then "npm i"
-then "npm start"
+To install:<br/>
+run "npm i"<br/>
+then "npm start"<br/>
+then "cd client"<br/>
+then "npm i"<br/>
+then "npm start"<br/>
 
 ## Resources used:
 
