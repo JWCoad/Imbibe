@@ -6,7 +6,7 @@
 
 ### Screenshot of deployed app ![Screenshot](\client\src\assets\images\screenshot.JPG)
 
-### Screenshot of deployed app ![Screenshot](client\src\assets\images\screenshot2.JPG)
+### Screenshot of deployed app ![Screenshot](project-three\client\src\assets\images\screenshot2.JPG)
 
 ### Screenshot of deployed app ![Screenshot](client\src\assets\images\screenshot3.JPG)
 
