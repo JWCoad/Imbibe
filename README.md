@@ -4,7 +4,7 @@
 
 ### [Deployed at](https://desolate-bayou-43609.herokuapp.com/)
 
-### Screenshot of deployed app ![Screenshot](assets/screenshot1.JPG)
+### Screenshot of deployed app ![Screenshot](assets/screenshot.JPG)
 
 ### Screenshot of deployed app ![Screenshot](assets/screenshot2.JPG)
 
